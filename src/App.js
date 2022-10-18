@@ -6,19 +6,22 @@ import {
   Header,
   Services,
   Team,
-  Testimonials,
+  Testimonial,
   Work,
-} from './components'
+} from './container'
+
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   return (
     <div className="app">
+      <Navbar />
       <Header />
       <About />
       <Work />
       <Services />
       <Team />
-      <Testimonials />
+      <Testimonial />
       <Footer />
     </div>
   )
