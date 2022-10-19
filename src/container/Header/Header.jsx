@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 import './Header.scss';
 
 const scaleVariants = {
@@ -33,14 +34,13 @@ const Header = () => (
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
           <span></span>
-          <div style={{ marginLeft: 20 }}>
+          <div style={{ margin: 10 }}>
             <p className="p-text">Need a quote?</p>
             <h1 className="h2-text">Click here</h1>
           </div>
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text"></p>
           <p className="p-text">Servicing the Wellington region since 2014</p>
         </div>
       </div>
@@ -75,4 +75,4 @@ const Header = () => (
   </div>
 );
 
-export default Header
+export default AppWrap(Header, 'home')

@@ -3,6 +3,11 @@ import { motion } from 'framer-motion'
 
 import './About.scss'
 
+import {
+  AppWrap,
+  MotionWrap,
+} from '../../wrapper'
+
 import { urlFor, client } from '../../client'
 
 const About = () => {
@@ -19,8 +24,10 @@ const About = () => {
     <>
       <span></span>
       <p className="head-text">
-        Good <span> design</span> <br />
-        is <span>good business.</span>
+        Our <span> Work.</span> <br />
+      </p>
+      <p>
+        Good design is <span>good business.</span>
       </p>
 
       <div className="app__profiles">
@@ -48,14 +55,44 @@ const About = () => {
             <p
               className="text"
               style={{ marginTop: 20 }}
-            >
-              {about.title}
-            </p>
+            ></p>
           </motion.div>
         ))}
+        <p>
+          We provide solutions for paint-related
+          projects for any interior or exterior
+          application.
+        </p>
+        <p className="p-text">
+          Our painters work closely with owner and
+          experienced painter, Luke Grindlay.
+          Luke's 8+ years in business and his love
+          for transforming properties is why The
+          Painter Guy has a trusted reputation and
+          many satisfied clients. Our highly
+          skilled team know how to protect your
+          most valuable asset using tailored
+          products for each substrate. Every job
+          is unique and deserves attention to
+          detail. Covering the whole spectrum of
+          painting and decorating, look no further
+          for specialists in beautiful home
+          renovations or refreshing the look of
+          your business.
+        </p>
+        <p className="p-text">
+          We make the process of cost estimating
+          and feedback easy for you. Get in touch
+          and let us provide a price for your next
+          painting project.
+        </p>
       </div>
     </>
   )
 }
 
-export default About
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg'
+)
