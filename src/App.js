@@ -4,10 +4,11 @@ import {
   About,
   Footer,
   Header,
-  Services,
-  Team,
+  // Services,
+  // Team,
   Testimonial,
   Work,
+  Brands,
 } from './container'
 
 import Navbar from './components/Navbar/Navbar'
@@ -21,8 +22,9 @@ const App = () => {
       <Header />
       <About />
       <Work />
-      <Services />
-      <Team />
+      <Brands />
+      {/* <Services />
+      <Team /> */}
       <Testimonial />
       <Footer />
     </div>
