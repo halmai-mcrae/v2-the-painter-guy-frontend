@@ -2,6 +2,8 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .app__skills-container {
@@ -9,7 +11,7 @@
   margin-top: 3rem;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -26,7 +28,6 @@
 
 
   @media screen and (max-width: 900px) {
-    margin-right: 0;
     justify-content: center;
     align-items: center;
   }
@@ -36,15 +37,15 @@
   flex-direction: column;
   text-align: center;
 
-  margin: 1rem;
+
 
   transition: all 0.3s ease-in-out;
 
   div {
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: #fef4f5;
+    background-color: #989788;
 
     img {
       width: 50%;

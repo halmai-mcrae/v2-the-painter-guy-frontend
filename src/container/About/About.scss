@@ -10,14 +10,15 @@
   margin: 1rem;
   text-transform: inherit!important;
 }
-.p {
-  position: fixed;
-}
+
 .p-text {
   font-size: 1rem;
-  font-weight: 400;
-  margin: .5rem;
+  margin: 1rem;
   text-transform: inherit!important;
+}
+
+.bold-text {
+  text-align: center!important;
 }
 
 .app__profiles {
@@ -34,7 +35,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin: 2rem;
+  margin: 3rem;
 
   img {
     width: 100%;

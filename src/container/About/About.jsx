@@ -24,9 +24,9 @@ const About = () => {
     <>
       <span></span>
       <p className="head-text">
-        Our <span> Work.</span> <br />
+        Our <span> work.</span> <br />
       </p>
-      <p>
+      <p className='bold-text'>
         Good design is <span>good business.</span>
       </p>
 
@@ -58,11 +58,12 @@ const About = () => {
             ></p>
           </motion.div>
         ))}
-        <p>
-          We provide solutions for paint-related
+
+      <div>
+     <p className="bold-text">
+        We provide solutions for paint-related
           projects for any interior or exterior
-          application.
-        </p>
+          application.</p>
         <p className="p-text">
           Our painters work closely with owner and
           experienced painter, Luke Grindlay.
@@ -72,7 +73,11 @@ const About = () => {
           many satisfied clients. Our highly
           skilled team know how to protect your
           most valuable asset using tailored
-          products for each substrate. Every job
+          products for each substrate.
+          <br />
+          <br />
+          
+          Every job
           is unique and deserves attention to
           detail. Covering the whole spectrum of
           painting and decorating, look no further
@@ -86,6 +91,7 @@ const About = () => {
           and let us provide a price for your next
           painting project.
         </p>
+        </div>
       </div>
     </>
   )
@@ -93,6 +99,6 @@ const About = () => {
 
 export default AppWrap(
   MotionWrap(About, 'app__about'),
-  'about',
+  'our work',
   'app__whitebg'
 )

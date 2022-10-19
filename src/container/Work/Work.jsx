@@ -38,7 +38,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text"> Gal<span>lery</span></h2>
+      <h2 className="head-text"> Gal<span>lery.</span></h2>
 
       <div className="app__work-filter">
         {['Residential', 'Commercial', 'Studio', 'All'].map((item, index) => (
@@ -101,6 +101,6 @@ const Work = () => {
 
 export default AppWrap(
   MotionWrap(Work, 'app__works'),
-  'works',
+  'gallery',
   'app__primarybg',
 );;

@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ReactTooltip from 'react-tooltip';
+// import ReactTooltip from 'react-tooltip';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Services.scss';
 
 const Skills = () => {
-  const [experiences, setExperiences] = useState([]);
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "collections"]';
     const servicesQuery = '*[_type == "services"]';
-
-    client.fetch(query).then((data) => {
-      setExperiences(data);
-    });
 
     client.fetch(servicesQuery).then((data) => {
       setServices(data);
