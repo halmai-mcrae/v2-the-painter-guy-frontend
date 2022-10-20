@@ -7,7 +7,6 @@
 .head-text {
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 1rem;
   text-transform: inherit!important;
 }
 
@@ -26,27 +25,25 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 2rem;
 }
 
 .app__profile-item {
-  width: 190px;
+  width: 165px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin: 3rem;
+  margin: 1rem;
 
   img {
     width: 100%;
-    height: 170px;
+    height: 140px;
     border-radius: 15px;
     object-fit: cover;
   }
 
   @media screen and (min-width: 2000px) {
     width: 370px;
-    margin: 2rem 4rem;
 
     img {
       height: 320px;

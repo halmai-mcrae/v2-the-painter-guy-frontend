@@ -36,7 +36,8 @@ const Header = () => (
           <span></span>
           <div style={{ margin: 10 }}>
             <p className="p-text">Need a quote?</p>
-            <h1 className="h2-text">Click here.</h1>
+            <h1 className="h2-text"> <a
+        href={`#${'contact us'}`}>Click here.</a></h1>
           </div>
         </div>
 
