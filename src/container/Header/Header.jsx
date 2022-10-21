@@ -28,7 +28,7 @@ const Header = () => (
     
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 2 }}
       className="app__header-info"
     >
       <div className="app__header-badge">
@@ -42,20 +42,20 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Servicing the Wellington region since 2014</p>
+          <p className="p-text">Servicing Wellington since 2013</p>
         </div>
       </div>
     </motion.div>
 
     <motion.div
       whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 0.5, delayChildren: 0.5 }}
+      transition={{ duration: 2, delayChildren: 0.5 }}
       className="app__header-img"
     >
       <img src={images.profile} alt="profile_bg" />
       <motion.img
         whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
+        transition={{ duration: 2, ease: 'easeInOut' }}
         src={images.circle}
         alt="profile_circle"
         className="overlay_circle"
@@ -69,7 +69,7 @@ const Header = () => (
     >
       {[images.flutter, images.redux, images.spotify].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
-          <img src={circle} alt="profile_bg" />
+          <a href={`#${'contact us'}`} ><img src={circle} alt="profile_bg" /></a>
         </div>
       ))}
     </motion.div>
