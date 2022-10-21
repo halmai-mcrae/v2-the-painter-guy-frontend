@@ -1,5 +1,4 @@
 #gallery {
-  
   .copyright {
     display: none;
   }
@@ -9,7 +8,6 @@
   width: 100%;
   flex-direction: column;
 }
-
 
 .app__work-filter {
   display: flex;
@@ -55,7 +53,7 @@
   align-items: center;
 
   .app__work-item {
-    width: 270px;
+    width: 250px;
     flex-direction: column;
 
     margin: 2rem;
@@ -78,7 +76,7 @@
     }
 
     @media screen and (max-width: 300px) {
-      width: 100%;
+      width: 1000%;
       margin: 1rem;
     }
   }
@@ -158,6 +156,6 @@
     padding: 0.5rem 1rem;
     border-radius: 10px;
     background-color: #fff;
-    top: -25px;
+    top: -15px;
   }
 }
