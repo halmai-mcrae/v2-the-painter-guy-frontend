@@ -67,7 +67,7 @@ const About = () => {
         <p className="p-text">
           Our painters work closely with owner and
           experienced painter, Luke Grindlay.
-          Luke's 8+ years in business and his love
+          Luke's 10 years in business and his love
           for transforming properties is why The
           Painter Guy has a trusted reputation and
           many satisfied clients. Our highly
