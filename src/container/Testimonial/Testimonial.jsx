@@ -1,59 +1,67 @@
-import React, { useState, useEffect } from 'react';
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import './Testimonial.scss';
+import './Testimonial.scss'
+
+import {
+  AppWrap,
+  MotionWrap,
+} from '../../wrapper'
+
+import { urlFor, client } from '../../client'
 
 const Testimonial = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonials, setTestimonials] = useState([]);
-
-  const handleClick = (index) => {
-    setCurrentIndex(index);
-  };
+  const [tests, setTests] = useState([])
 
   useEffect(() => {
-    const query = '*[_type == "testimonials"]';
-
+    const query = '*[_type == "testimonials"]'
     client.fetch(query).then((data) => {
-      setTestimonials(data);
-    });
-  }, []);
+      setTests(data)
+    })
+  }, [])
 
   return (
     <>
-      {testimonials.length && (
-        <>
-          <div className="app__testimonial-item app__flex">
-            <img src={urlFor(testimonials[currentIndex].imgUrl)} alt={testimonials[currentIndex].name} />
-            <div className="app__testimonial-content">
-              <p className="p-text">{testimonials[currentIndex].feedback}</p>
-              <div>
-                <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
-                <h5 className="p-text">{testimonials[currentIndex].company}</h5>
-              </div>
-            </div>
-          </div>
+      <span></span>
+      <p className="head-text">
+        Testi<span>monials.</span> <br />
+      </p>
 
-          <div className="app__testimonial-btns app__flex">
-            <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
-              <HiChevronLeft />
-            </div>
-
-            <div className="app__flex" onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
-              <HiChevronRight />
-            </div>
-          </div>
-        </>
-      )}
-
+      <div className="app__profiles">
+        {tests.map((test, index) => (
+          <motion.div
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              duration: 0.5,
+              type: 'tween',
+            }}
+            className="app__profile-item"
+            key={test.name + index}
+          >
+            <img
+              src={urlFor(test.imgUrl)}
+              alt={test.imgUrl}
+            />
+            <h3
+              className="bold-text"
+              style={{ marginTop: 20 }}
+            >
+              {test.name}
+            </h3>
+              
+            <p
+              className="text"
+              style={{ marginTop: 20 }}
+            >{test.feedback}</p>
+          </motion.div>
+        ))}
+      </div>
     </>
-  );
-};
-
+  )
+}
 export default AppWrap(
-  MotionWrap(Testimonial, 'app__testimonial'),
+  MotionWrap(Testimonial, 'app__about'),
   'testimonials',
-  'app__primarybg',
-);
+  'app__whitebg'
+)
