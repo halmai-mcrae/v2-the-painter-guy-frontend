@@ -60,6 +60,8 @@ const Work = () => {
 
       <Gallery />
 
+    
+
       <div className="app__work-filter">
         {[
           'Residential',

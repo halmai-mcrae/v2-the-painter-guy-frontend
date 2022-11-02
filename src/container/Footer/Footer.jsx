@@ -40,6 +40,8 @@ const Footer = () => {
     <>
       <h2 className="head-text">Cont<span>act u</span>s.</h2>
       <p className="bold-text">
+        Fill out the form below or send a text.</p>
+      <p className="bold-text">
         We aim to respond within 24 hours.</p>
 
       <div className="app__footer-cards">
