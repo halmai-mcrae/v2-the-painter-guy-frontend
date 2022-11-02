@@ -30,6 +30,7 @@ import profile from '../assets/profile.png'
 import circle from '../assets/circle.svg'
 import logo from '../assets/logo.png'
 import logoWhite from '../assets/logo-white.png'
+import profileReg from '../assets/tpg-white-registered.png'
 
 import adidas from '../assets/adidas.png'
 import amazon from '../assets/amazon.png'
@@ -68,6 +69,7 @@ export default {
   about03,
   about04,
   profile,
+  profileReg,
   circle,
   logo,
   logoWhite,

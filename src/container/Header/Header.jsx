@@ -22,6 +22,7 @@ const Header = () => (
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    objectFit: 'cover',
     // backgroundAttachment: 'relative',
     
   }}>
@@ -36,7 +37,7 @@ const Header = () => (
           <span></span>
           <div style={{ margin: 10 }}>
             <p className="p-text">Need a quote?</p>
-            <h1 className="h2-text"> <a
+            <h1 className="h3-text"> <a
         href={`#${'contact us'}`}>Click here.</a></h1>
           </div>
         </div>
