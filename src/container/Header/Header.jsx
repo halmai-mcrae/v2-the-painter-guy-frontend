@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-
 import { images } from '../../constants'
 import { AppWrap } from '../../wrapper'
 import './Header.scss'
@@ -52,9 +51,10 @@ const Header = () => (
 
         <div className="tag-cmp app__flex">
           <p className="p-text">
-            Residential and Commercial
+            Residential & Commercial<br/>
+            Painting Solutions.
           </p>
-          <p>Wellington NZ.</p>
+          <p>Wellington, NZ.</p>
         </div>
       </div>
     </motion.div>
