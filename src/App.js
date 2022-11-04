@@ -4,8 +4,6 @@ import {
   About,
   Footer,
   Header,
-  // Services,
-  // Team,
   Testimonial,
   Work,
   Brands,
