@@ -51,7 +51,7 @@ const Footer = () => {
               className="p-text"
               rel="noreferrer"
             >
-              Email
+              luke@thepainterguy.co.nz
             </a>
           </div>
           <div className="app__footer-card">
