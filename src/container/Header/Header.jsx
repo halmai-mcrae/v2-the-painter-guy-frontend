@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react'
+import { motion } from 'framer-motion'
 
-import { images } from '../../constants';
-import { AppWrap } from '../../wrapper';
-import './Header.scss';
+import { images } from '../../constants'
+import { AppWrap } from '../../wrapper'
+import './Header.scss'
 
 const scaleVariants = {
   whileInView: {
@@ -14,21 +14,24 @@ const scaleVariants = {
       ease: 'easeInOut',
     },
   },
-};
+}
 
 const Header = () => (
-  <div className="app__header app__flex" style={{ 
-    backgroundImage: `url(${images.bg})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    objectFit: 'cover',
-    // backgroundAttachment: 'relative',
-    
-  }}>
-    
+  <div
+    className="app__header app__flex"
+    style={{
+      backgroundImage: `url(${images.bg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      objectFit: 'cover',
+    }}
+  >
     <motion.div
-      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      whileInView={{
+        x: [-100, 0],
+        opacity: [0, 1],
+      }}
       transition={{ duration: 2 }}
       className="app__header-info"
     >
@@ -36,27 +39,44 @@ const Header = () => (
         <div className="badge-cmp app__flex">
           <span></span>
           <div style={{ margin: 10 }}>
-            <p className="p-text">Need a quote?</p>
-            <h1 className="h3-text"> <a
-        href={`#${'contact us'}`}>Click here.</a></h1>
+            <p className="p-text">
+              Need a quote?
+            </p>
+            <h3 className="h3-text">
+              <a href={`#${'contact us'}`}>
+                Click here.
+              </a>
+            </h3>
           </div>
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Residential & Commercial</p> <p>Painting Solutions.</p>
+          <p className="p-text">
+            Residential and Commercial
+          </p>
+          <p>Wellington NZ.</p>
         </div>
       </div>
     </motion.div>
 
     <motion.div
       whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 2, delayChildren: 0.5 }}
+      transition={{
+        duration: 2,
+        delayChildren: 0.5,
+      }}
       className="app__header-img"
     >
-      <img src={images.profileReg} alt="profile_bg" />
+      <img
+        src={images.profileReg}
+        alt="profile_bg"
+      />
       <motion.img
         whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 2, ease: 'easeInOut' }}
+        transition={{
+          duration: 2,
+          ease: 'easeInOut',
+        }}
         src={images.circle}
         alt="profile_circle"
         className="overlay_circle"
@@ -68,13 +88,22 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.flutter, images.redux, images.spotify].map((circle, index) => (
-        <div className="circle-cmp app__flex" key={`circle-${index}`}>
-          <a href={`#${'contact us'}`} ><img src={circle} alt="profile_bg" /></a>
+      {[
+        images.flutter,
+        images.redux,
+        images.spotify,
+      ].map((circle, index) => (
+        <div
+          className="circle-cmp app__flex"
+          key={`circle-${index}`}
+        >
+          <a href={`#${'contact us'}`}>
+            <img src={circle} alt="profile_bg" />
+          </a>
         </div>
       ))}
     </motion.div>
   </div>
-);
+)
 
 export default AppWrap(Header, 'home')
