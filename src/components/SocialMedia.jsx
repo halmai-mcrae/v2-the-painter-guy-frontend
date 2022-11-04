@@ -10,7 +10,7 @@ const SocialMedia = () => {
     <div className="app__social">
       <div>
         <a
-          href="tel:+64 (027) 365-8483"
+          href="tel:+64 27 365 8483"
           rel="noreferrer"
         >
           <FaPhone />
