@@ -18,13 +18,6 @@ const scaleVariants = {
 const Header = () => (
   <div
     className="app__header app__flex"
-    style={{
-      backgroundImage: `url(${images.bg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      objectFit: 'cover',
-    }}
   >
     <motion.div
       whileInView={{
