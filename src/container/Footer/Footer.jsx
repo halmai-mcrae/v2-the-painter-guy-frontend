@@ -150,7 +150,7 @@ const Footer = () => {
         </div>
         <div className="app__footer-card">
           <img
-            src={images.redux}
+            src={images.instagram}
             alt="instagram"
           />
           <a
@@ -164,7 +164,7 @@ const Footer = () => {
         </div>
         <div className="app__footer-card">
           <img
-            src={images.flutter}
+            src={images.facebook}
             alt="facebook"
           />
           <a

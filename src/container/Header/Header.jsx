@@ -16,9 +16,7 @@ const scaleVariants = {
 }
 
 const Header = () => (
-  <div
-    className="app__header app__flex"
-  >
+  <div className="app__header app__flex">
     <motion.div
       whileInView={{
         x: [-100, 0],
@@ -29,25 +27,16 @@ const Header = () => (
     >
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
-          <span></span>
-          <div style={{ margin: 10 }}>
+          <div>
             <p className="p-text">
               Need a quote?
             </p>
-            <h3 className="h3-text">
+            <h4 className="h4-text">
               <a href={`#${'contact us'}`}>
                 Click here.
               </a>
-            </h3>
+            </h4>
           </div>
-        </div>
-
-        <div className="tag-cmp app__flex">
-          <p className="p-text">
-            Residential & Commercial<br/>
-            Painting Solutions.
-          </p>
-          <p>Wellington, NZ.</p>
         </div>
       </div>
     </motion.div>
@@ -56,7 +45,6 @@ const Header = () => (
       whileInView={{ opacity: [0, 1] }}
       transition={{
         duration: 2,
-        delayChildren: 0.5,
       }}
       className="app__header-img"
     >
@@ -64,18 +52,7 @@ const Header = () => (
         src={images.profileReg}
         alt="profile_bg"
       />
-      <motion.img
-        whileInView={{ scale: [0, 1] }}
-        transition={{
-          duration: 2,
-          ease: 'easeInOut',
-        }}
-        src={images.circle}
-        alt="profile_circle"
-        className="overlay_circle"
-      />
     </motion.div>
-
     <motion.div
       variants={scaleVariants}
       whileInView={scaleVariants.whileInView}
